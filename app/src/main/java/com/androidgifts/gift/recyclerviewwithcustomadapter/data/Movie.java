@@ -14,11 +14,11 @@ public class Movie {
     String title;
     float average;
     int count;
-    public Movie(String name, String logo, String date) {
-        this.name = name;
-        this.logo = logo;
-        this.date = date;
-    }
+//    public Movie(String name, String logo, String date) {
+//        this.name = name;
+//        this.logo = logo;
+//        this.date = date;
+//    }
 
     public String getDate() {
         return date;

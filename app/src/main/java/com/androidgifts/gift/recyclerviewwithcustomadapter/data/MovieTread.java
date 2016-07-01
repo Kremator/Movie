@@ -2,6 +2,7 @@ package com.androidgifts.gift.recyclerviewwithcustomadapter.data;
 
 import android.os.AsyncTask;
 
+import com.androidgifts.gift.recyclerviewwithcustomadapter.Constant;
 import com.androidgifts.gift.recyclerviewwithcustomadapter.activity.MainActivity;
 
 import org.apache.commons.io.IOUtils;
@@ -29,13 +30,13 @@ public class MovieTread extends AsyncTask<Void,Void,Void> {
             String WebAddressVote;
 
 
-            WebAddress = "http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3953ba3f4558050341dd03ea425f2eb1";
-            WebAddressVote = "http://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=3953ba3f4558050341dd03ea425f2eb1";
+            WebAddress = "http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key="+ Constant.API_KEY;
+            WebAddressVote = "http://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key="+Constant.API_KEY;
             mPopularList = new ArrayList<>();
             mTopVotedList = new ArrayList<>();
 
-//            URLResult(WebAddress, mPopularList);
-//            URLResult(WebAddressVote, mTopVotedList);
+           URLResult(WebAddress, mPopularList);
+            URLResult(WebAddressVote, mTopVotedList);
 
             mPopularList.toString();
             return null;
